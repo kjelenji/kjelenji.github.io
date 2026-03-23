@@ -469,6 +469,13 @@ h4 {
     font-size: 0.95rem;
 }
 
+.tech-pill-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    display: inline-block;
+    mix-blend-mode: multiply;
+}
+
 .tech-pill-mask {
     width: 0.95rem;
     height: 0.95rem;
