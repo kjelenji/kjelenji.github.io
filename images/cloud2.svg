@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 100" width="180" height="100">
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Smaller fluffy cloud -->
+  <ellipse cx="90" cy="70" rx="50" ry="20" fill="#87CEEB" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="55" cy="55" r="22" fill="#87CEEB" opacity="0.85" filter="url(#softGlow)"/>
+  <circle cx="90" cy="45" r="25" fill="#87CEEB" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="125" cy="55" r="20" fill="#87CEEB" opacity="0.85" filter="url(#softGlow)"/>
+  <circle cx="75" cy="35" r="15" fill="#87CEEB" opacity="0.8" filter="url(#softGlow)"/>
+</svg>

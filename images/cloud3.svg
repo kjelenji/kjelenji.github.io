@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 130" width="220" height="130">
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Large puffy cloud -->
+  <ellipse cx="110" cy="90" rx="70" ry="30" fill="#87CEEB" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="65" cy="70" r="30" fill="#87CEEB" opacity="0.85" filter="url(#softGlow)"/>
+  <circle cx="110" cy="60" r="35" fill="#87CEEB" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="155" cy="70" r="28" fill="#87CEEB" opacity="0.85" filter="url(#softGlow)"/>
+  <circle cx="130" cy="45" r="25" fill="#87CEEB" opacity="0.8" filter="url(#softGlow)"/>
+  <circle cx="85" cy="40" r="20" fill="#87CEEB" opacity="0.8" filter="url(#softGlow)"/>
+  <circle cx="140" cy="35" r="18" fill="#87CEEB" opacity="0.75" filter="url(#softGlow)"/>
+</svg>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen Elenjickal</title>
+    <link rel="icon" type="image/svg+xml" href="icons/poodle-favicon.svg">
+    <link rel="shortcut icon" href="icons/poodle-favicon.svg">
+    <link rel="apple-touch-icon" href="icons/poodle-favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title"></h1>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#about" class="nav-link">Skills</a></li>
+                </ul>
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                    <span class="sun-icon"></span>
+                    <span class="moon-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background elements -->
+    <div class="stars-container"></div>
+    <div class="cloud-container">
+        <img src="images/cloud1.svg" class="cloud cloud1" alt="">
+        <img src="images/cloud2.svg" class="cloud cloud2" alt="">
+        <img src="images/cloud3.svg" class="cloud cloud3" alt="">
+    </div>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <ul>
+            <li><a href="#about" data-tooltip="Skills" title="Navigate to Skills section" aria-label="Skills"><span class="sr-only">Skills</span></a></li>
+            <li><a href="#projects" data-tooltip="Projects" title="Navigate to Projects section" aria-label="Projects"><span class="sr-only">Projects</span></a></li>
+            <li><a href="#experience" data-tooltip="Experience" title="Navigate to Experience section" aria-label="Experience"><span class="sr-only">Experience</span></a></li>
+        </ul>
+    </div>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero page-section">
+            <div class="hero-content">
+                <h1>Hi, I'm Karen.</h1>
+                <p class="hero-subtitle">Software Engineer</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More About Me</a>
+                    <a href="#projects" class="btn btn-secondary">Projects</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kjelenji/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                        <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://github.com/kjelenji" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                        <img src="icons/github.svg" alt="GitHub" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+
+            <div class="content-section">
+                <h2>About Me</h2>
+                <p>I'm focused on the intersection of human-centric design and backend efficiency. Experienced in integrating LLM APIs and leveraging full-stack technologies to build responsive, accessible applications.</p>
+                <h3 class="skills-title">Skills</h3>
+                <ul class="skills-list">
+                    <li><strong>Technologies:</strong> Python, Java, JavaScript (ES6+), C++ (C++17), SQL, HTML5, CSS3, PHP, R, MatLab, Node.js, Express, Google Cloud Platform (GCP), Firestore, Firebase, REST APIs, Chrome Extension API (Manifest V3), Chrome AI, LLM Integration (Gemini), Webhooks</li>
+                    <li><strong>Tools:</strong> GitHub, GitLab, Cursor, GitHub Copilot, Notion, Microsoft Office Suite (Word, Excel, PowerPoint), MySQL, Postman, Chrome DevTools, Figma, SPSS, REDCap, Qualtrics, Google Forms, Digital Accessibility (WCAG)</li>
+                    <li><strong>Soft Skills:</strong> Technical Problem Analysis, Strategic System Design, Collaborative Development, User-Centric Advocacy, and Interdisciplinary Communication</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="page-section">
+
+            <div class="content-section">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>Almond</h3>
+                            <a href="https://github.com/kjelenji/Almond" target="_blank" rel="noopener" class="project-github-link" aria-label="Open Almond on GitHub">
+                                <img src="icons/github.svg" alt="" class="project-github-icon">
+                            </a>
+                        </div>
+                        <p class="project-duration">Oct. 2025 - Present</p>
+                        <p>An autonomous AI agent within a modular Chrome Extension to provide real-time navigation and accessibility support for older adults. It helps sensitive eyes browse the web with ease, and provide step by step guidance on how to do things on the web.</p>
+                        <div class="project-tech-stack" aria-label="Almond tech stack">
+                            <span class="tech-pill"><i class="devicon-javascript-plain"></i><span>JavaScript</span></span>
+                            <span class="tech-pill"><i class="devicon-html5-plain"></i><span>HTML5</span></span>
+                            <span class="tech-pill"><i class="devicon-css3-plain"></i><span>CSS3</span></span>
+                            <span class="tech-pill tech-pill-text"><span class="tech-pill-mask tech-pill-extension" aria-hidden="true"></span><span>Chrome Ext</span></span>
+                            <span class="tech-pill tech-pill-text"><span class="tech-pill-mask tech-pill-chrome" aria-hidden="true"></span><span>Chrome AI</span></span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>Gist</h3>
+                            <a href="https://github.com/kjelenji/Gist" target="_blank" rel="noopener" class="project-github-link" aria-label="Open Gist on GitHub">
+                                <img src="icons/github.svg" alt="" class="project-github-icon">
+                            </a>
+                        </div>
+                        <p class="project-duration">Feb. 2025 - Present</p>
+                        <p>An inclusive interactive storytelling game that leverages AI-driven narration and visual cues to provide an accessible puzzle experience for all users. Players solve puzzles by finding the connection between visual cards, which the system then synthesizes into a story.</p>
+                        <div class="project-tech-stack" aria-label="Gist tech stack">
+                            <span class="tech-pill"><i class="devicon-javascript-plain"></i><span>JavaScript</span></span>
+                            <span class="tech-pill tech-pill-text"><span class="tech-pill-mask tech-pill-gemini" aria-hidden="true"></span><span>Gemini 3.1</span></span>
+                            <span class="tech-pill"><i class="devicon-express-original"></i><span>Express</span></span>
+                            <span class="tech-pill"><i class="devicon-nodejs-plain"></i><span>Node.js</span></span>
+                            <span class="tech-pill"><i class="devicon-firebase-plain"></i><span>Firestore</span></span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3>LittleBot</h3>
+                            <a href="https://github.com/kjelenji/LittleBot" target="_blank" rel="noopener" class="project-github-link" aria-label="Open LittleBot on GitHub">
+                                <img src="icons/github.svg" alt="" class="project-github-icon">
+                            </a>
+                        </div>
+                        <p class="project-duration">Mar. 2026</p>
+                        <p>A "passive documentation" bot designed to automatically capture architectural intent and decision-making context, ensuring permanent records exist without requiring separate manual entries.</p>
+                        <div class="project-tech-stack" aria-label="LittleBot tech stack">
+                            <span class="tech-pill"><i class="devicon-cplusplus-plain"></i><span>C++</span></span>
+                            <span class="tech-pill"><i class="devicon-gitlab-plain"></i><span>GitLab</span></span>
+                            <span class="tech-pill tech-pill-text"><span>Webhooks</span></span>
+                            <span class="tech-pill tech-pill-text"><span>C++17</span></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Experience Section -->
+        <section id="experience" class="page-section">
+            <div class="content-section">
+                <h2>Experience</h2>
+                <div class="experience-modern">
+                    <div class="experience-tabs">
+                        <button class="experience-tab active" data-exp="exp1">St. Francis Animal Rescue</button>
+                        <button class="experience-tab" data-exp="exp2">Rutgers Institute for Health, Health Care Policy and Aging Research</button>
+                        <button class="experience-tab" data-exp="exp3">Rutgers University-New Brunswick</button>
+                    </div>
+                    <div class="experience-panel">
+                        <div class="exp-panel" id="exp1">
+                            <h3 class="exp-role">Web Developer - St. Francis Animal Rescue (501(c)(3) nonprofit) </h3>
+                            <h4 class="exp-company">Jan. 2025 - Sept. 2025</h4>
+                            <ul class="exp-desc">
+                                <li>Coordinated with co-founders to manage the design system and execution, ensuring brand consistency and maintaining an efficient, user-centric interface across all site pages</li>
+                                <li>Developed and implemented responsive website layouts using HTML5, CSS3</li>
+                            </ul>
+                        </div>
+                        <div class="exp-panel" id="exp2" style="display:none;">
+                            <h3 class="exp-role">Research Coordinator - Rutgers Institute for Health, Health Care Policy and Aging Research</h3>
+                            <h4 class="exp-company">Jan. 2022 - Nov. 2022</h4>
+                            <ul class="exp-desc">
+                                <li>Coordinated multiple data collection efforts and collaborated with other institutions and lab members</li>
+                                <li>Managed, cleaned, and prepared data via Python and R scripts to be analyzed to better understand participants diagnosed with multiple sclerosis (MS), Alzheimer's, and other neurological deficits</li>
+                                <li>Recruited participants, administered surveys/assessments to participants using REDCap, and purchased lab equipment for upcoming studies</li>
+                                <li>Collaborated with the research team to conduct ongoing studies such as editing relevant forms for the IRB, cleaning and managing data, resolving technical issues with the IT team, identifying and establishing research questions, and analyzing effective strategies to further illuminate research problems based on existing data and literature</li>
+                            </ul>
+                        </div>
+                        <div class="exp-panel" id="exp3" style="display:none;">
+                            <h3 class="exp-role">Research Assistant - Rutgers University</h3>
+                            <h4 class="exp-company">Feb. 2021 - Feb. 2022</h4>
+                            <ul class="exp-desc">
+                                <li>Managed, cleaned, and prepared data to be analyzed for improving students' learning and social behavior in the classroom</li>
+                                <li>Generated online surveys using Qualtrics and Google Forms software platforms</li>
+                                <li>Utilized Microsoft Excel, IBM SPSS, and MySQL functions to design, generate project databases, integrate data sources, manipulate data structure, and perform data quality control</li>
+                                <li>Created Python scripts to manipulate, analyze, and visualize data for performance reporting, publications, and presentations</li>
+                                <li>Assisted in literature searches of peer-reviewed publication databases and journal articles; generate article summaries and synthesis of findings across numerous publications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="page-section">
+            <div class="content-section">
+                <h2>Education</h2>
+                <div class="experience-item">
+                    <h3>Rutgers University – New Brunswick</h3>
+                    <h4>Bachelor of Arts in Computer Science and Psychology</h4>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Karen Elenjickal. Vibe coded with 🩵.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
