@@ -1,4 +1,4 @@
-# Karen Elenjickal - Personal Website
+#
 
 Lightweight single-page portfolio built with plain HTML, CSS, and JavaScript.
 
@@ -25,13 +25,11 @@ Then open `http://127.0.0.1:5500`.
 
 Use one of these options:
 
-- User site (recommended): `kjelenji.github.io`
-- Project site: any repository name, such as `personal-website`
+- User site (recommended): `kjelenji.github.io
 
 ### 2. Push this folder to GitHub
 
 ```bash
-cd "C:\Users\kelen\OneDrive\Desktop\personal-website"
 git init
 git add .
 git commit -m "Initial portfolio site"
@@ -54,7 +52,6 @@ In GitHub repository settings:
 ### 4. Open the live URL
 
 - User site: `https://kjelenji.github.io`
-- Project site: `https://kjelenji.github.io/<repo-name>/`
 
 ## Notes
 
