@@ -470,8 +470,8 @@ h4 {
 }
 
 .tech-pill-icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 0.95rem;
+    height: 0.95rem;
     display: inline-block;
     flex-shrink: 0;
     mix-blend-mode: multiply;
