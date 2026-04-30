@@ -361,20 +361,29 @@ h4 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1rem;
-    margin-top: 1.2rem;
+    /* Use 'auto-fill' with your specific card width (300px) */
+    grid-template-columns: repeat(auto-fill, 300px);
+    
+    /* This controls the actual space between the cards */
+    gap: 30px; 
+    
+    /* Aligns the whole group of cards to the left */
+    justify-content: start; 
+    
+    margin-top: 1.0rem;
 }
 
 .project-card {
     border: 1px solid var(--outline-strong);
-    border-radius: 18px;
-    padding: 1.25rem;
+    border-radius: 10px;
+    padding: 0.3rem;
     background-color: transparent;
-    min-height: 250px;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    /* Ensure the card doesn't exceed the grid column width */
+    width: 100%; 
+    max-width: 300px;
     box-shadow: none;
 }
 
@@ -412,10 +421,16 @@ h4 {
     flex-grow: 1;
 }
 
+.project-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    align-self: flex-start;
+}
+
 .project-github-link {
     width: 38px;
     height: 38px;
-    margin-left: auto;
     flex-shrink: 0;
     border-radius: 999px;
     border: 1px solid var(--outline-strong);
@@ -427,7 +442,22 @@ h4 {
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.project-github-link:hover {
+.project-notion-link {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 999px;
+    border: 1px solid var(--outline-strong);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    background-color: transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-github-link:hover,
+.project-notion-link:hover {
     transform: translateY(-1px);
     border-color: var(--accent);
     background-color: var(--surface);
@@ -441,6 +471,17 @@ h4 {
 
 [data-theme="dark"] .project-github-icon {
     filter: invert(91%) sepia(8%) saturate(566%) hue-rotate(337deg) brightness(103%) contrast(91%);
+}
+
+.project-notion-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    filter: none;
+}
+
+[data-theme="dark"] .project-notion-icon {
+    filter: invert(100%);
 }
 
 .project-tech-stack {
@@ -515,9 +556,33 @@ h4 {
     gap: 1rem;
 }
 
-.experience-tabs {
+.experience-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.experience-details {
+    border: 1px solid var(--outline);
+    border-radius: 16px;
+    padding: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    flex: 1;
+}
+
+.exp-item {
+    display: none;
+}
+
+.exp-item[style*="display:block"] {
+    display: block;
+}
+
+.experience-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.6rem;
 }
 
@@ -526,9 +591,32 @@ h4 {
     background-color: transparent;
     color: var(--text);
     border-radius: 999px;
-    padding: 0.5rem 0.85rem;
+    padding: 0.65rem 0.85rem;
     cursor: pointer;
     font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    min-width: 140px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.button-company {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.button-title {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .experience-tab.active,
@@ -537,22 +625,32 @@ h4 {
     color: var(--accent-strong);
 }
 
-.experience-panel {
-    border: 1px solid var(--outline);
-    border-radius: 16px;
-    padding: 1rem;
-    background-color: transparent;
-    box-shadow: none;
+.experience-tab.active .button-title {
+    color: var(--accent);
 }
 
 .exp-role {
-    font-size: 1.1rem;
+    font-size: .95rem;
     margin-bottom: 0.3rem;
 }
+.exp-role .company-link {
+    color: var(--accent-strong);
+    text-decoration: none;
+    font-weight: 700;
+}
 
+.exp-role .company-link:hover {
+    text-decoration: underline;
+}
+.exp-role .company-link .company-link-icon {
+    margin-left: 0.3rem;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+}
 .exp-company {
     color: var(--text-soft);
-    font-size: 0.95rem;
+    font-size: 0.89rem;
     margin-bottom: 0.75rem;
 }
 
@@ -565,7 +663,7 @@ h4 {
 }
 
 .experience-item {
-    border: 1px solid var(--outline);
+    border: none;
     border-radius: 16px;
     padding: 1rem;
 }
@@ -651,6 +749,20 @@ h4 {
     .side-nav {
         right: 0.5rem;
     }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .experience-tab {
+        flex: 1;
+        min-width: 120px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -689,10 +801,6 @@ h4 {
     .content-section {
         border-radius: 16px;
         padding: 1.2rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
 
     .side-nav {

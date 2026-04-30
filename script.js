@@ -69,32 +69,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setupExperienceTabs() {
         const tabs = Array.from(document.querySelectorAll('.experience-tab'));
-        const panels = Array.from(document.querySelectorAll('.exp-panel'));
-        if (!tabs.length || !panels.length) return;
+        const items = Array.from(document.querySelectorAll('.exp-item'));
+        if (!tabs.length || !items.length) return;
 
         tabs.forEach((tab) => {
             tab.addEventListener('click', () => {
                 tabs.forEach((t) => t.classList.remove('active'));
-                panels.forEach((panel) => {
-                    panel.style.display = 'none';
+                items.forEach((item) => {
+                    item.style.display = 'none';
                 });
 
                 tab.classList.add('active');
-                const targetId = tab.dataset.exp;
-                const targetPanel = document.getElementById(targetId || '');
-                if (targetPanel) targetPanel.style.display = 'block';
+                const targetExp = tab.dataset.exp;
+                const targetItem = document.querySelector(`.exp-item[data-exp="${targetExp}"]`);
+                if (targetItem) targetItem.style.display = 'block';
             });
         });
 
-        const firstPanelId = tabs[0].dataset.exp;
-        const firstPanel = document.getElementById(firstPanelId || '');
-        tabs.forEach((tab) => tab.classList.remove('active'));
-        tabs[0].classList.add('active');
-        panels.forEach((panel) => {
-            if (firstPanel && panel.id === firstPanel.id) {
-                panel.style.display = 'block';
-            }
-        });
+        // Initialize first tab as active
+        if (tabs.length > 0) {
+            tabs[0].classList.add('active');
+            const firstExp = tabs[0].dataset.exp;
+            const firstItem = document.querySelector(`.exp-item[data-exp="${firstExp}"]`);
+            if (firstItem) firstItem.style.display = 'block';
+        }
     }
 
     createStars();
