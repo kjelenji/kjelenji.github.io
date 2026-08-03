@@ -25,7 +25,7 @@ Then open `http://127.0.0.1:5500`.
 
 Use one of these options:
 
-- User site (recommended): `kelenji010.github.io
+- User site (recommended): kelenji010.github.io
 
 ### 2. Push this folder to GitHub
 
@@ -34,7 +34,7 @@ git init
 git add .
 git commit -m "Initial portfolio site"
 git branch -M main
-git remote add origin https://github.com/kjelenji/kjelenji.github.io.git
+git remote add origin https://github.com/kelenji010/kelenji010.github.io.git
 git push -u origin main
 ```
 
@@ -51,7 +51,7 @@ In GitHub repository settings:
 
 ### 4. Open the live URL
 
-- User site: `https://kjelenji.github.io`
+- User site: `https://kelenji010.github.io`
 
 ## Notes
 
