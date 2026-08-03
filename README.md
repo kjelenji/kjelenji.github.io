@@ -25,7 +25,7 @@ Then open `http://127.0.0.1:5500`.
 
 Use one of these options:
 
-- User site (recommended): `kjelenji.github.io
+- User site (recommended): `kelenji010.github.io
 
 ### 2. Push this folder to GitHub
 
